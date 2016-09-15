@@ -1,6 +1,6 @@
 
-var division_max_throughput_mbps_in = 500;
-var division_max_throughput_mbps_out = 500;
+var division_max_throughput_mbps_in = 1000;
+var division_max_throughput_mbps_out = 1000;
 var division_internet_json_path_1 = "/StrendinMonitor/JSON/bySNMPThroughputSensor.aspx?sensorid=1"
 var division_internet_json_path_2 = "/StrendinMonitor/JSON/bySNMPThroughputSensor.aspx?sensorid=2"
 var division_snmp_is_reversed = true;

@@ -20,8 +20,8 @@ $(document).ready(function(){
     //index_table_row("", "", , , 5);
     //index_table_row("Primary Internet Connection", "#", 1, 1, 200)
     //index_table_row("Failover Internet Connection", "#", 2, 1, 200)
-    index_table_row("Division Office", "do", 5, 6, 500);
-    index_table_row("Battleford Central", "bcs", 9, 8, 100);
+    index_table_row("Division Office", "do", 5, 6, 10);
+    index_table_row("Battleford Central", "bcs", 9, 8, 10);
     index_table_row("Bready", "bready", 10, 9, 10);
     index_table_row("Cando", "cando", 11, 10, 10);
     index_table_row("Connaught", "connaught", 14, 13, 10);
@@ -34,7 +34,7 @@ $(document).ready(function(){
     index_table_row("Lawrence", "lawrence", 3, 3, 10);
     index_table_row("Leoville", "leoville", 19, 18, 10);
     index_table_row("Luseland", "luseland", 20, 19, 10);
-    index_table_row("Macklin", "macklin", 21, 20, 100);    
+    index_table_row("Macklin", "macklin", 21, 20, 10);    
     index_table_row("Maymont", "maymont", 23, 21, 10);
     index_table_row("McKitrick", "mckitrick", 24, 22, 10);
     index_table_row("McLurg", "mclurg", 25, 23, 10);
@@ -42,8 +42,8 @@ $(document).ready(function(){
     index_table_row("NBCHS", "nbchs", 27, 25, 10);
     index_table_row("Norman Carter", "nces", 28, 26, 10);
     //index_table_row("Phoenix Manacowin", "phxman", 29, 27, 10);
-    index_table_row("Spiritwood High", "shs", 30, 28, 100);
+    index_table_row("Spiritwood High", "shs", 30, 28, 10);
     index_table_row("St. Vital", "stv", 33, 31, 10);
-    index_table_row("UCHS", "uchs", 31, 29, 100);
+    index_table_row("UCHS", "uchs", 31, 29, 10);
     index_table_row("UPS", "ups", 32, 30, 10);
 });

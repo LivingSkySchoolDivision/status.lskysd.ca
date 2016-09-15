@@ -6,8 +6,8 @@
 var school_name = "North Battleford Comprehensive High School";
 
 // Max connection speeds (in megabits per second)
-var school_maxmbps_in = 500;
-var school_maxmbps_out = 500;
+var school_maxmbps_in = 1000;
+var school_maxmbps_out = 1000;
 
 // Is the SNMP data reversed? Is the "in" field actually the "out" traffic?
 var school_snmp_is_reversed = false;
