@@ -1,0 +1,341 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+/* *********************************
+   * General page styles
+   ********************************* */
+
+body {
+    font-size: 10pt;
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+
+}
+
+.important_text {
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(0,0,128,0.05);
+  border-color: rgba(0,0,128,0.3);
+  padding: 5px;
+}
+
+@media print
+{
+    .noPrint
+    {
+        display:none;
+    }
+
+    .header_container {
+        display: none;
+    }
+}
+
+h1 {
+  border-bottom: 1px solid #C0C0C0;
+  margin-top: 25px;
+}
+
+h2 {
+
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.page_container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.roundborder {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.mini_label {
+    font-size: 7pt;
+}
+
+.school_link {
+    text-decoration: none;
+    color: blue;
+    font-size: 14pt;
+    display: block;
+    text-align: left;
+}
+
+.data_description {
+    font-size: 9pt;
+}
+
+
+.red {
+    background-color: rgba(75,0,0,0.05);
+    border: 1px solid rgba(750,0,0,0.1);
+
+}
+
+
+.blue {
+    background-color: rgba(0,0,75,0.05);
+    border: 1px solid rgba(0,0,75,0.1);
+
+}
+
+.green {
+    background-color: rgba(0,75,0,0.05);
+    border: 1px solid rgba(0,75,0,0.1);
+
+}
+
+.expand_link {
+    color: blue;
+    cursor: pointer;
+    font-size: 8pt;
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.expandable_section {
+}
+
+.section_title {
+    border: 0;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+/* *********************************
+   * Header
+   ********************************* */
+
+.header_container {
+  color: #FFFFFF;
+  height: 45px;
+  /* Background color for district: 25383C */
+  /* Background color for schools: 4682B4 */
+  /* Background color for public: 007730 */
+  background-color: #25383C;
+  border: 0;
+  
+  /* Background color for district: 45585C */
+  /* Background color for schools: 689AD3 */
+  /* Background color for public: 228A4C */
+  border-bottom: 3px solid #45585C;
+  padding: 0;
+  margin: 0; 
+}
+
+#LSKYLogo {
+    margin-top: 2px;
+    margin-bottom: auto;
+    margin-right: 0;
+    margin-left: 10px;  
+    height: 40px; 
+    width: 40px; 
+}
+
+#PageTitle {
+    font-size: 20pt;
+    padding-left: 7px;
+    color: rgba(255,255,255,0.9);
+    font-family: 'RobotoBold', sans-serif;
+    font-weight: bold;
+    display: inline;    
+}
+
+#PageTitle_Specific {
+    padding: 5px; 
+    font-size: 20pt;
+    color: rgba(255,255,255,0.9);
+    font-family: 'RobotoRegular', sans-serif;
+    display: inline;
+}
+
+.header_centeredcontent {
+  padding-top: 7px;
+  padding-left: 15px;
+  width: 800px;
+  text-align: left;
+}
+
+/* *********************************
+   * Data tables
+   ********************************* */
+
+.datatable th {
+    text-align: right;
+    border: 0;
+    border-bottom: 1px dotted black;
+
+}
+
+.datatable {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.datatable td {
+    text-align: right;
+}
+
+/* *********************************
+   * Graphs fields
+   ********************************* */
+
+.graph {
+    width: 300px;
+    height: 70px;
+}
+
+.bandwidth_meter {
+    width: 300px;
+    height: 275px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* *********************************
+   * Health colors
+   ********************************* */
+
+.health_healthy {
+    border: 2px solid #007700;
+    background-color: #229922;
+    color: white;
+}
+
+.health_warning {
+    text-align: center;
+    border: 2px solid rgba(248, 114, 23, 1);
+    background-color: rgba(248, 114, 23, 0.4);
+    color: black;
+}
+
+.health_unknown {
+    text-align: center;
+    border: 2px solid #C0C0C0;
+    background-color: #F7F7F7;
+    color: black;
+}
+
+.health_offline {
+    text-align: center;
+    border: 2px solid #770000;
+    background-color: #AA0114;
+    color: white;
+    font-weight: bold;
+}
+
+.health_maintenance {
+    border: 2px solid #000077;
+    background-color: #444499;
+    color: black;
+}
+
+
+
+/* *********************************
+   * Sensor fields
+   ********************************* */
+
+.sensor_data_field {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12pt;
+    text-align: right;
+    width: 110px;
+}
+
+.sensor_data_table {
+    width: 550px;
+    margin-right: 0;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sensor_data_title {
+    font-size: 8pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sensor_data_row {
+
+}
+
+.sensor_data_label {
+    font-weight: bold;
+    font-size: 12pt;
+    width: 230px;
+}
+
+.data_field_date {
+    font-size: 10pt;
+}
+
+.connection_table {
+    border-radius: 5px; 
+    border: 1px solid rgba(0,0,0,0.2); 
+    background-color: rgba(0,0,0,0.01);
+    width: 400px;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.connected_failed {
+    color: rgba(200,0,0,1);
+    background-color: rgba(255,0,0,0.1);
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid rgba(200,0,0,1);
+    border-radius: 5px;
+}
+
+.connected_ok {
+    color: rgba(0,200,0,1);
+    background-color: rgba(0,255,0,0.1);
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid rgba(0,200,0,1);
+    border-radius: 5px;
+}
+
+.connected_checking {
+    color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.05);
+    text-align: center;
+    border: 2px solid rgba(0,0,0,0.02);
+    border-radius: 5px;  
+}
+
+.connected_unhealthy {  
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 204, 153);
+    text-align: center;
+    border: 2px solid rgba(255, 153, 102, 255);
+    border-radius: 5px;  
+}
+
+.conmap_desc {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #C0C0C0;
+  background: rgba(0,0,0,0.1);
+  border-radius: 5px;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 8pt;
+}
