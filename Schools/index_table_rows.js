@@ -9,9 +9,9 @@ function index_table_row(name, url, snmpsensorid, pingsensorid, snmpgraphmax) {
         "<tr><td align='center'>" +
         "<a class='school_link' href='/schools/" + url + "/'>" + name + "</a>" +
         "</td><td>" +
-        "<img class='roundborder' src='/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=" + snmpsensorid + "&showhours=true&graphstyle=line&width=" + snmpGraphWidth + "&height=" +  graphHeight+ "&hours=6&maxvalue=" + snmpgraphmax + "'>" +
+        "<img class='roundborder' src='" + strendinMonitorGraphRoot + "/graphs/SNMPThroughput.aspx?sensorid=" + snmpsensorid + "&showhours=true&graphstyle=line&width=" + snmpGraphWidth + "&height=" +  graphHeight+ "&hours=6&maxvalue=" + snmpgraphmax + "'>" +
         "</td><td>" +
-        "<img class='roundborder' src='/strendinmonitor/graphs/PingLatency.aspx?sensorid=" + pingsensorid + "&showhours=true&graphstyle=bar&width=" + pingGraphWidth + "&height=" +  graphHeight+ "&hours=" + graphHours + "'>" +
+        "<img class='roundborder' src='" + strendinMonitorGraphRoot + "/graphs/PingLatency.aspx?sensorid=" + pingsensorid + "&showhours=true&graphstyle=bar&width=" + pingGraphWidth + "&height=" +  graphHeight+ "&hours=" + graphHours + "'>" +
         "</td></tr>"
         );
 }

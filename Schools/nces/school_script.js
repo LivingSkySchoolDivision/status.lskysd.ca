@@ -14,5 +14,5 @@ var school_snmp_is_reversed = false;
 
 // URLs to the JSON files from the SNMP monitor. These should NOT start with "http://dashboard.lskysd.ca"
 // so use relative links only.
-var school_snmp_json_path = "/StrendinMonitor/JSON/bySNMPThroughputSensor.aspx?sensorid=28";
-var school_ping_json_path = "/StrendinMonitor/JSON/byPingLatencySensor.aspx?sensorid=26";
+var school_snmp_json_path = strendinMonitorJSONRoot + "/JSON/bySNMPThroughputSensor.aspx?sensorid=28";
+var school_ping_json_path = strendinMonitorJSONRoot + "/JSON/byPingLatencySensor.aspx?sensorid=26";

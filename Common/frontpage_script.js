@@ -1,8 +1,8 @@
 
 var division_max_throughput_mbps_in = 1000;
 var division_max_throughput_mbps_out = 1000;
-var division_internet_json_path_1 = "/StrendinMonitor/JSON/bySNMPThroughputSensor.aspx?sensorid=1"
-var division_internet_json_path_2 = "/StrendinMonitor/JSON/bySNMPThroughputSensor.aspx?sensorid=2"
+var division_internet_json_path_1 = strendinMonitorJSONRoot + "/JSON/bySNMPThroughputSensor.aspx?sensorid=1"
+var division_internet_json_path_2 = strendinMonitorJSONRoot + "/JSON/bySNMPThroughputSensor.aspx?sensorid=2"
 var division_snmp_is_reversed = true;
 
 function degreesToRadiansRotated(degrees) {
@@ -374,16 +374,15 @@ function updateDivisionCurrent() {
                 gauge_mbps_in = "<1";
             }
 
-
             drawBandwidthGauge(gauge_mbps_in, peakMBPSIn, division_max_throughput_mbps_in, "Inbound", gauge_mbps_out, peakMBPSOut, division_max_throughput_mbps_out, "Outbound", "bandwidth_meter_division");
 
             // Update graphs
             d = new Date();
-            $('#graph_division_1').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=1&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
-            $('#graph_division_6').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=6&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
-            $('#graph_division_12').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=12&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
-            $('#graph_division_24').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=24&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
-            $('#graph_division_48').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=48&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_1').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=1&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_6').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=6&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_12').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=12&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_24').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=24&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_48').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=48&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
         });
     });
 }
@@ -439,114 +438,6 @@ function updateDivisionDataCounters_Day() {
     });
 }
 
-function updateInternetStatus() {
-    var JSONPath = "/LSKYDashboardDataCollector/Proxy/JSON.aspx?SKIPCACHE=Yes&url=http://dashboard.lskysd.ca/LSKYDashboardDataCollector/Internet/index.aspx";
-
-    $.getJSON(JSONPath, function(data) {
-        
-        var outsideTotal = 3;           // How many are we testing outside
-        var outsideFailedCount = 0;     // How many of those failed
-        var insideTotal = 3;
-        var insideFailedCount = 0;
-
-        if (data.Google == 1)
-        {
-            $('#connect_google').html("OK");
-            $('#connect_google').addClass("connected_ok");
-            $('#connect_google').removeClass("connected_checking");
-            
-        } else {
-            outsideFailedCount++;
-            $('#connect_google').html("FAILED");
-            $('#connect_google').addClass("connected_failed");
-            $('#connect_google').removeClass("connected_checking");
-        }
-
-        if (data.Microsoft == 1)
-        {
-            $('#connect_microsoft').html("OK");
-            $('#connect_microsoft').addClass("connected_ok");
-            $('#connect_microsoft').removeClass("connected_checking");
-            
-        } else {
-            outsideFailedCount++;
-            $('#connect_microsoft').html("FAILED");
-            $('#connect_microsoft').addClass("connected_failed");
-            $('#connect_microsoft').removeClass("connected_checking");
-        }
-
-        if (data.Amazon == 1)
-        {
-            $('#connect_amazon').html("OK");
-            $('#connect_amazon').addClass("connected_ok");
-            $('#connect_amazon').removeClass("connected_checking");
-            
-        } else {
-            outsideFailedCount++;
-            $('#connect_amazon').html("FAILED");
-            $('#connect_amazon').addClass("connected_failed");
-            $('#connect_amazon').removeClass("connected_checking");
-        }
-
-        if (data.LSKYWWW == 1)
-        {
-            $('#connect_lskywww').html("OK");
-            $('#connect_lskywww').addClass("connected_ok");
-            $('#connect_lskywww').removeClass("connected_checking");
-        } else {
-            insideFailedCount++;
-            $('#connect_lskywww').html("FAILED");
-            $('#connect_lskywww').addClass("connected_failed");
-            $('#connect_lskywww').removeClass("connected_checking");
-        }
-
-        if (data.LSKYPortal == 1)
-        {
-            $('#connect_lskyportal').html("OK");
-            $('#connect_lskyportal').addClass("connected_ok");
-            $('#connect_lskyportal').removeClass("connected_checking");
-        } else {
-            insideFailedCount++;
-            $('#connect_lskyportal').html("FAILED");
-            $('#connect_lskyportal').addClass("connected_failed");
-            $('#connect_lskyportal').removeClass("connected_checking");
-        }
-
-        if (data.LSKYHelpDesk == 1)
-        {
-            $('#connect_lskyhelpdesk').html("OK");
-            $('#connect_lskyhelpdesk').addClass("connected_ok");
-            $('#connect_lskyhelpdesk').removeClass("connected_checking");
-        } else {
-            insideFailedCount++;
-            $('#connect_lskyhelpdesk').html("FAILED");
-            $('#connect_lskyhelpdesk').addClass("connected_failed");
-            $('#connect_lskyhelpdesk').removeClass("connected_checking");
-        }
-        
-        if (outsideFailedCount >= outsideTotal)
-        {            
-            $('#conn_datacenterinternet').html("DOWN");
-            $('#conn_datacenterinternet').addClass("connected_failed");
-            $('#conn_datacenterinternet').removeClass("connected_checking");
-            $('#conn_datacenterinternet').removeClass("connected_unhealthy");
-        } else if (outsideFailedCount > 0) {
-            $('#conn_datacenterinternet').html("INTERMITTENT");
-            $('#conn_datacenterinternet').removeClass("connected_ok");
-            $('#conn_datacenterinternet').removeClass("connected_checking");
-            $('#conn_datacenterinternet').addClass("connected_unhealthy");
-        } else {
-            $('#conn_datacenterinternet').html("UP");
-            $('#conn_datacenterinternet').addClass("connected_ok");
-            $('#conn_datacenterinternet').removeClass("connected_checking");
-            $('#conn_datacenterinternet').removeClass("connected_unhealthy");
-
-        }
-
-
-    });
-}
-
 /* ******************************************** */
 /* * when the page loads                      * */
 /* ******************************************** */
@@ -555,8 +446,7 @@ $(document).ready(function() {
     updateNames();
     updateDivisionDataCounters_Month();
     updateDivisionDataCounters_Day();
-    updateDivisionCurrent();
-    updateInternetStatus();
+    updateDivisionCurrent();    
 });
 
 

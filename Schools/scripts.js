@@ -1,8 +1,8 @@
 
 var division_max_throughput_mbps_in = 1000;
 var division_max_throughput_mbps_out = 1000;
-var division_internet_json_path_1 = "/StrendinMonitor/JSON/bySNMPThroughputSensor.aspx?sensorid=1"
-var division_internet_json_path_2 = "/StrendinMonitor/JSON/bySNMPThroughputSensor.aspx?sensorid=2"
+var division_internet_json_path_1 = strendinMonitorJSONRoot + "/JSON/bySNMPThroughputSensor.aspx?sensorid=1"
+var division_internet_json_path_2 = strendinMonitorJSONRoot + "/JSON/bySNMPThroughputSensor.aspx?sensorid=2"
 var division_snmp_is_reversed = true;
 
 function degreesToRadiansRotated(degrees) {
@@ -499,11 +499,11 @@ function updateDivisionCurrent() {
 
             // Update graphs
             d = new Date();
-            $('#graph_division_1').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=1&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
-            $('#graph_division_6').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=6&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
-            $('#graph_division_12').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=12&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
-            $('#graph_division_24').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=24&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
-            $('#graph_division_48').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=48&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_1').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=1&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_6').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=6&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_12').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=12&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_24').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=24&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
+            $('#graph_division_48').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + division_snmp_sensor_id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=48&maxvalue=' + division_max_throughput_mbps_in + '&date=' + d.getTime());
         });
     });
 }
@@ -670,10 +670,10 @@ function updateSchoolSNMP() {
 
         // Update graphs
         d = new Date();
-        $('#graph_school_1').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + data.id + '&showhours=true&graphstyle=line&width=300&height=70&hours=1&maxvalue=' + school_maxmbps_in + '&date=' + d.getTime());
-        $('#graph_school_6').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + data.id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=6&maxvalue=' + school_maxmbps_in + '&date=' + d.getTime());
-        $('#graph_school_12').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + data.id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=12&maxvalue=' + school_maxmbps_in + '&date=' + d.getTime());
-        $('#graph_school_24').attr('src','/strendinmonitor/graphs/SNMPThroughput.aspx?sensorid=' + data.id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=24&maxvalue=' + school_maxmbps_in + '&date=' + d.getTime());
+        $('#graph_school_1').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + data.id + '&showhours=true&graphstyle=line&width=300&height=70&hours=1&maxvalue=' + school_maxmbps_in + '&date=' + d.getTime());
+        $('#graph_school_6').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + data.id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=6&maxvalue=' + school_maxmbps_in + '&date=' + d.getTime());
+        $('#graph_school_12').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + data.id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=12&maxvalue=' + school_maxmbps_in + '&date=' + d.getTime());
+        $('#graph_school_24').attr('src',strendinMonitorGraphRoot + '/graphs/SNMPThroughput.aspx?sensorid=' + data.id + '&showhours=true&&graphstyle=line&width=300&height=70&hours=24&maxvalue=' + school_maxmbps_in + '&date=' + d.getTime());
 
 
     });
@@ -718,10 +718,10 @@ function updateSchoolPing() {
 
         // Update graphs
         d = new Date();
-        $('#graph_ping_1').attr('src','/strendinmonitor/graphs/PingLatency.aspx?sensorid=' + data.id + '&graphstyle=bar&width=300&height=70&hours=1&&date=' + d.getTime());
-        $('#graph_ping_6').attr('src','/strendinmonitor/graphs/PingLatency.aspx?sensorid=' + data.id + '&graphstyle=bar&width=300&height=70&hours=6&date=' + d.getTime());
-        $('#graph_ping_12').attr('src','/strendinmonitor/graphs/PingLatency.aspx?sensorid=' + data.id + '&graphstyle=bar&width=300&height=70&hours=12&date=' + d.getTime());
-        $('#graph_ping_24').attr('src','/strendinmonitor/graphs/PingLatency.aspx?sensorid=' + data.id + '&graphstyle=bar&width=300&height=70&hours=24&date=' + d.getTime());
+        $('#graph_ping_1').attr('src',strendinMonitorGraphRoot + '/graphs/PingLatency.aspx?sensorid=' + data.id + '&graphstyle=bar&width=300&height=70&hours=1&&date=' + d.getTime());
+        $('#graph_ping_6').attr('src',strendinMonitorGraphRoot + '/graphs/PingLatency.aspx?sensorid=' + data.id + '&graphstyle=bar&width=300&height=70&hours=6&date=' + d.getTime());
+        $('#graph_ping_12').attr('src',strendinMonitorGraphRoot + '/graphs/PingLatency.aspx?sensorid=' + data.id + '&graphstyle=bar&width=300&height=70&hours=12&date=' + d.getTime());
+        $('#graph_ping_24').attr('src',strendinMonitorGraphRoot + '/graphs/PingLatency.aspx?sensorid=' + data.id + '&graphstyle=bar&width=300&height=70&hours=24&date=' + d.getTime());
 
     });
 }
@@ -738,43 +738,6 @@ $(document).ready(function() {
     updateDivisionDataCounters_Month();
     updateDivisionDataCounters_Day();
     updateDivisionCurrent();
-    //$('#section_school_snmp').slideUp("slow", function() {});
-
-
-    /* ******************************************** */
-    /* * Event Handlers                           * */
-    /* ******************************************** */
-    /*
-    $( "#section_school_snmp_link" ).click(function() {
-        if ( $( "#section_school_snmp" ).is( ":hidden" ) ) {
-            $( "#section_school_snmp" ).slideDown( "slow" );
-            $( "#section_school_snmp_link" ).html("Click to hide section");
-        } else {
-            $( "#section_school_snmp" ).slideUp();
-            $( "#section_school_snmp_link" ).html("Click to expand section");
-        }
-    });
-
-    $( "#section_division_snmp_link" ).click(function() {
-        if ( $( "#section_division_snmp" ).is( ":hidden" ) ) {
-            $( "#section_division_snmp" ).slideDown( "slow" );
-            $( "#section_division_snmp_link" ).html("Click to hide section");
-        } else {
-            $( "#section_division_snmp" ).slideUp();
-            $( "#section_division_snmp_link" ).html("Click to expand section");
-        }
-    });
-
-    $( "#section_school_ping_link" ).click(function() {
-        if ( $( "#section_school_ping" ).is( ":hidden" ) ) {
-            $( "#section_school_ping" ).slideDown( "slow" );
-            $( "#section_school_ping_link" ).html("Click to hide section");
-        } else {
-            $( "#section_school_ping" ).slideUp();
-            $( "#section_school_ping_link" ).html("Click to expand section");
-        }
-    });
-    */
 });
 
 
