@@ -41,7 +41,6 @@ $(document).ready(function(){
     index_table_row("Medstead", "medstead", 26, 24, 10);
     index_table_row("NBCHS", "nbchs", 27, 25, 10);
     index_table_row("Norman Carter", "nces", 28, 26, 10);
-    //index_table_row("Phoenix Manacowin", "phxman", 29, 27, 10);
     index_table_row("Spiritwood High", "shs", 30, 28, 10);
     index_table_row("St. Vital", "stv", 33, 31, 10);
     index_table_row("UCHS", "uchs", 31, 29, 10);
