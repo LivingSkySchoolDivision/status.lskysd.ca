@@ -1,0 +1,91 @@
+body {
+    font-family: Arial;
+}
+
+h1 {
+    font-family: Arial;
+}
+
+img {
+}
+
+.node {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    padding: 5px;
+    background: #F0F0F0;
+    border: 1px solid #A0A0A0;
+}
+
+.node_field_title {
+    display: inline;            
+}
+
+.node_field_data {
+    background-color: white;
+    border: 1px solid #C0C0C0;
+    display: inline;
+    font-family: 'Lucida Console';
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.node_title{ 
+    font-weight: bold;
+    font-size: 12pt;
+    border: 0;
+}
+
+.data_section {
+    font-size: 8pt;
+    margin-left: 10px;
+}
+
+.graph {
+    background-color: white; 
+}
+
+.graph_help_text {
+    font-size: 6pt;
+}
+
+.graph_section {
+    position:relative;
+    float: right;
+}
+
+.graph_current_date {
+    float: right;
+    font-size: 8pt;
+}
+
+.node_ip {
+    font-size: 8pt;
+    margin-left: 10px;
+    display: inline;
+}
+
+.health_offline {
+    display: inline;
+    color: red;
+    font-weight: bold;
+    background-color: rgba(255,0,0,0.1);
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.health_online {
+    display: inline;
+    color: #005500;
+    background-color: rgba(0,255,0,0.1);
+    border-color: #005500;
+}
+
+.health_recovering {
+    display: inline;
+    color: yellow;
+    background-color: #505050;
+    border-color: yellow;
+}

@@ -25,8 +25,7 @@ $(document).ready(function(){
     index_table_row("Bready", "bready", 10, 9, 10);
     index_table_row("Cando", "cando", 11, 10, 10);
     index_table_row("Connaught", "connaught", 14, 13, 10);
-    index_table_row("Cut Knife Elementary", "ckes", 12, 11, 10);
-    index_table_row("Cut Knife High", "ckhs", 13, 12, 10);
+    index_table_row("Cut Knife Community", "ckcs", 13, 12, 10);
     index_table_row("Hafford", "hafford", 15, 14, 10);
     index_table_row("Hartley Clark", "hces", 16, 15, 10);
     index_table_row("Heritage", "heritage", 17, 16, 10);
